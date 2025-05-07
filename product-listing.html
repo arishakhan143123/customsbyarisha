@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Listing - Customs by Arisha</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Product Listing</h1>
+    <a href="index.html">Home</a>
+  </header>
+
+  <section class="upload-section">
+    <h2>Upload Your Product Image</h2>
+    <input type="file" id="imageUpload" accept="image/*">
+    <div id="preview"></div>
+  </section>
+
+  <section class="product-categories">
+    <h2>Categories</h2>
+    <ul>
+      <li>Wedding Cards</li>
+      <li>Business Cards</li>
+      <li>Birthday Cards</li>
+      <li>Party Invitations</li>
+      <li>Anniversary Cards</li>
+      <li>New Year Cards</li>
+      <li>Custom Design on Request</li>
+    </ul>
+  </section>
+
+  <script>
+    // Image upload preview
+    const imageUpload = document.getElementById('imageUpload');
+    const preview = document.getElementById('preview');
+
+    imageUpload.addEventListener('change', () => {
+      const file = imageUpload.files[0];
+      if (file && file.type.startsWith('image/')) {
+        const reader = new FileReader();
+        reader.onload = () => {
+          preview.innerHTML = `<img src="${reader.result}" alt="Uploaded Design" style="max-width:300px; margin-top:10px;">`;
+        };
+        reader.readAsDataURL(file);
+      } else {
+        preview.innerHTML = `<p>Please select a valid image file.</p>`;
+      }
+    });
+  </script>
+</body>
+</html>
