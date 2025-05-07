@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fce1e1;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f8b0b0;
+}
+
+header .logo h1 {
+  font-size: 36px;
+  color: #fff;
+}
+
+header .login button {
+  background-color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px;
+  background-color: #f8b0b0;
+  color: white;
+}
+
+.hero h2 {
+  font-size: 40px;
+}
+
+.categories {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.category-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.category-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 250px;
+}
+
+.category-card h4 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8b0b0;
+  color: white;
+}
