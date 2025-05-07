@@ -1,0 +1,26 @@
+<!-- Cart Page -->
+<h2>Your Cart</h2>
+<div id="cart-items"></div>
+<button id="checkout">Proceed to Checkout</button>
+
+<script>
+  // Load cart from localStorage and display it
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  const cartItemsContainer = document.getElementById('cart-items');
+  cartItemsContainer.innerHTML = ''; // Clear existing content
+
+  // Show each cart item
+  cart.forEach(item => {
+    const cartItem = document.createElement('div');
+    cartItem.innerHTML = `
+      <p>${item.name} - ${item.price} x ${item.quantity}</p>
+    `;
+    cartItemsContainer.appendChild(cartItem);
+  });
+
+  // Proceed to checkout (implement later)
+  document.getElementById('checkout').addEventListener('click', function() {
+    window.location.href = 'checkout.html'; // Redirect to checkout page
+  });
+</script>
